@@ -1,0 +1,2 @@
+﻿  Framework.cpp
+C:\Users\przek\Desktop\mgr\POBR\Framework17v2\Framework.cpp(1,10): fatal error C1083: Nie można otworzyć pliku dołącz: 'opencv2/core/core.hpp': No such file or directory

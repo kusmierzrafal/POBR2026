@@ -1,0 +1,126 @@
+﻿  Framework.cpp
+C:\Users\przek\Desktop\mgr\POBR\Framework17v2\Framework.cpp(102,15): error C2429: element funkcja językowa „powiązania ze strukturą” wymaga flagi kompilatora „/std:c++17”
+C:\Users\przek\Desktop\mgr\POBR\Framework17v2\Framework.cpp(104,25): error C2672: „std::min”: nie znaleziono zgodnej przeciążonej funkcji
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\utility(109,26):
+      może to być „_Ty std::min(std::initializer_list<_Elem>)”
+          C:\Users\przek\Desktop\mgr\POBR\Framework17v2\Framework.cpp(104,25):
+          „_Ty std::min(std::initializer_list<_Elem>)”: oczekuje 1 argumentów — podano 2
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\utility(106,26):
+      lub       "_Ty std::min(std::initializer_list<_Elem>,_Pr)"
+          C:\Users\przek\Desktop\mgr\POBR\Framework17v2\Framework.cpp(104,25):
+          „_Ty std::min(std::initializer_list<_Elem>,_Pr)”: nie można wywnioskować argumentu szablon dla elementu „std::initializer_list<_Elem>” z „int”
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\utility(98,6):
+      lub       "const _Ty &std::min(const _Ty &,const _Ty &) noexcept(<expr>)"
+          C:\Users\przek\Desktop\mgr\POBR\Framework17v2\Framework.cpp(104,25):
+          „const _Ty &std::min(const _Ty &,const _Ty &) noexcept(<expr>)”: parametr szablon „_Ty” jest niejednoznaczny
+              C:\Users\przek\Desktop\mgr\POBR\Framework17v2\Framework.cpp(104,25):
+              może to być "unknown-type"
+              C:\Users\przek\Desktop\mgr\POBR\Framework17v2\Framework.cpp(104,25):
+              lub       "int"
+          C:\Users\przek\Desktop\mgr\POBR\Framework17v2\Framework.cpp(104,25):
+          „const _Ty &std::min(const _Ty &,const _Ty &) noexcept(<expr>)”: nie można wywnioskować argumentu szablon dla elementu „const _Ty &” z „unknown-type”
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\utility(88,33):
+      lub       "const _Ty &std::min(const _Ty &,const _Ty &,_Pr) noexcept(<expr>)"
+          C:\Users\przek\Desktop\mgr\POBR\Framework17v2\Framework.cpp(104,25):
+          „const _Ty &std::min(const _Ty &,const _Ty &,_Pr) noexcept(<expr>)”: oczekuje 3 argumentów — podano 2
+  
+C:\Users\przek\Desktop\mgr\POBR\Framework17v2\Framework.cpp(105,25): error C2672: „std::max”: nie znaleziono zgodnej przeciążonej funkcji
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\utility(85,26):
+      może to być „_Ty std::max(std::initializer_list<_Elem>)”
+          C:\Users\przek\Desktop\mgr\POBR\Framework17v2\Framework.cpp(105,25):
+          „_Ty std::max(std::initializer_list<_Elem>)”: oczekuje 1 argumentów — podano 2
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\utility(82,26):
+      lub       "_Ty std::max(std::initializer_list<_Elem>,_Pr)"
+          C:\Users\przek\Desktop\mgr\POBR\Framework17v2\Framework.cpp(105,25):
+          „_Ty std::max(std::initializer_list<_Elem>,_Pr)”: nie można wywnioskować argumentu szablon dla elementu „std::initializer_list<_Elem>” z „int”
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\utility(74,6):
+      lub       "const _Ty &std::max(const _Ty &,const _Ty &) noexcept(<expr>)"
+          C:\Users\przek\Desktop\mgr\POBR\Framework17v2\Framework.cpp(105,25):
+          „const _Ty &std::max(const _Ty &,const _Ty &) noexcept(<expr>)”: parametr szablon „_Ty” jest niejednoznaczny
+              C:\Users\przek\Desktop\mgr\POBR\Framework17v2\Framework.cpp(105,25):
+              może to być "unknown-type"
+              C:\Users\przek\Desktop\mgr\POBR\Framework17v2\Framework.cpp(105,25):
+              lub       "int"
+          C:\Users\przek\Desktop\mgr\POBR\Framework17v2\Framework.cpp(105,25):
+          „const _Ty &std::max(const _Ty &,const _Ty &) noexcept(<expr>)”: nie można wywnioskować argumentu szablon dla elementu „const _Ty &” z „unknown-type”
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\utility(64,33):
+      lub       "const _Ty &std::max(const _Ty &,const _Ty &,_Pr) noexcept(<expr>)"
+          C:\Users\przek\Desktop\mgr\POBR\Framework17v2\Framework.cpp(105,25):
+          „const _Ty &std::max(const _Ty &,const _Ty &,_Pr) noexcept(<expr>)”: oczekuje 3 argumentów — podano 2
+  
+C:\Users\przek\Desktop\mgr\POBR\Framework17v2\Framework.cpp(106,25): error C2672: „std::min”: nie znaleziono zgodnej przeciążonej funkcji
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\utility(109,26):
+      może to być „_Ty std::min(std::initializer_list<_Elem>)”
+          C:\Users\przek\Desktop\mgr\POBR\Framework17v2\Framework.cpp(106,25):
+          „_Ty std::min(std::initializer_list<_Elem>)”: oczekuje 1 argumentów — podano 2
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\utility(106,26):
+      lub       "_Ty std::min(std::initializer_list<_Elem>,_Pr)"
+          C:\Users\przek\Desktop\mgr\POBR\Framework17v2\Framework.cpp(106,25):
+          „_Ty std::min(std::initializer_list<_Elem>,_Pr)”: nie można wywnioskować argumentu szablon dla elementu „std::initializer_list<_Elem>” z „int”
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\utility(98,6):
+      lub       "const _Ty &std::min(const _Ty &,const _Ty &) noexcept(<expr>)"
+          C:\Users\przek\Desktop\mgr\POBR\Framework17v2\Framework.cpp(106,25):
+          „const _Ty &std::min(const _Ty &,const _Ty &) noexcept(<expr>)”: parametr szablon „_Ty” jest niejednoznaczny
+              C:\Users\przek\Desktop\mgr\POBR\Framework17v2\Framework.cpp(106,25):
+              może to być "unknown-type"
+              C:\Users\przek\Desktop\mgr\POBR\Framework17v2\Framework.cpp(106,25):
+              lub       "int"
+          C:\Users\przek\Desktop\mgr\POBR\Framework17v2\Framework.cpp(106,25):
+          „const _Ty &std::min(const _Ty &,const _Ty &) noexcept(<expr>)”: nie można wywnioskować argumentu szablon dla elementu „const _Ty &” z „unknown-type”
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\utility(88,33):
+      lub       "const _Ty &std::min(const _Ty &,const _Ty &,_Pr) noexcept(<expr>)"
+          C:\Users\przek\Desktop\mgr\POBR\Framework17v2\Framework.cpp(106,25):
+          „const _Ty &std::min(const _Ty &,const _Ty &,_Pr) noexcept(<expr>)”: oczekuje 3 argumentów — podano 2
+  
+C:\Users\przek\Desktop\mgr\POBR\Framework17v2\Framework.cpp(107,25): error C2672: „std::max”: nie znaleziono zgodnej przeciążonej funkcji
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\utility(85,26):
+      może to być „_Ty std::max(std::initializer_list<_Elem>)”
+          C:\Users\przek\Desktop\mgr\POBR\Framework17v2\Framework.cpp(107,25):
+          „_Ty std::max(std::initializer_list<_Elem>)”: oczekuje 1 argumentów — podano 2
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\utility(82,26):
+      lub       "_Ty std::max(std::initializer_list<_Elem>,_Pr)"
+          C:\Users\przek\Desktop\mgr\POBR\Framework17v2\Framework.cpp(107,25):
+          „_Ty std::max(std::initializer_list<_Elem>,_Pr)”: nie można wywnioskować argumentu szablon dla elementu „std::initializer_list<_Elem>” z „int”
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\utility(74,6):
+      lub       "const _Ty &std::max(const _Ty &,const _Ty &) noexcept(<expr>)"
+          C:\Users\przek\Desktop\mgr\POBR\Framework17v2\Framework.cpp(107,25):
+          „const _Ty &std::max(const _Ty &,const _Ty &) noexcept(<expr>)”: parametr szablon „_Ty” jest niejednoznaczny
+              C:\Users\przek\Desktop\mgr\POBR\Framework17v2\Framework.cpp(107,25):
+              może to być "unknown-type"
+              C:\Users\przek\Desktop\mgr\POBR\Framework17v2\Framework.cpp(107,25):
+              lub       "int"
+          C:\Users\przek\Desktop\mgr\POBR\Framework17v2\Framework.cpp(107,25):
+          „const _Ty &std::max(const _Ty &,const _Ty &) noexcept(<expr>)”: nie można wywnioskować argumentu szablon dla elementu „const _Ty &” z „unknown-type”
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\utility(64,33):
+      lub       "const _Ty &std::max(const _Ty &,const _Ty &,_Pr) noexcept(<expr>)"
+          C:\Users\przek\Desktop\mgr\POBR\Framework17v2\Framework.cpp(107,25):
+          „const _Ty &std::max(const _Ty &,const _Ty &,_Pr) noexcept(<expr>)”: oczekuje 3 argumentów — podano 2
+  
+C:\Users\przek\Desktop\mgr\POBR\Framework17v2\Framework.cpp(192,13): error C2664: „bool looksLikeM(const cv::Mat &,const std::vector<int,std::allocator<int>> &,int,int,const Blob &,int)”: nie można dokonać konwersji argumentu 5 z „const int” do „const Blob &”
+      C:\Users\przek\Desktop\mgr\POBR\Framework17v2\Framework.cpp(192,43):
+      Przyczyna: nie można skonwertować z "const int" na "const Blob"
+      C:\Users\przek\Desktop\mgr\POBR\Framework17v2\Framework.cpp(192,43):
+      „Blob::Blob”: żadna przeciążona funkcja nie może przekonwertować wszystkich typów argumentów
+          C:\Users\przek\Desktop\mgr\POBR\Framework17v2\Framework.cpp(75,1):
+          może to być „Blob::Blob(Blob &&)”
+              C:\Users\przek\Desktop\mgr\POBR\Framework17v2\Framework.cpp(192,43):
+              „Blob::Blob(Blob &&)”: nie można dokonać konwersji argumentu 1 z „const int” do „Blob &&”
+                  C:\Users\przek\Desktop\mgr\POBR\Framework17v2\Framework.cpp(192,43):
+                  Przyczyna: nie można skonwertować z "const int" na "Blob"
+                  C:\Users\przek\Desktop\mgr\POBR\Framework17v2\Framework.cpp(192,43):
+                  Konwersja wymaga drugiego operatora konwersji zdefiniowanego przez użytkownika lub konstruktora
+          C:\Users\przek\Desktop\mgr\POBR\Framework17v2\Framework.cpp(75,1):
+          lub       "Blob::Blob(const Blob &)"
+              C:\Users\przek\Desktop\mgr\POBR\Framework17v2\Framework.cpp(192,43):
+              „Blob::Blob(const Blob &)”: nie można dokonać konwersji argumentu 1 z „const int” do „const Blob &”
+                  C:\Users\przek\Desktop\mgr\POBR\Framework17v2\Framework.cpp(192,43):
+                  Przyczyna: nie można skonwertować z "const int" na "const Blob"
+                  C:\Users\przek\Desktop\mgr\POBR\Framework17v2\Framework.cpp(192,43):
+                  Konwersja wymaga drugiego operatora konwersji zdefiniowanego przez użytkownika lub konstruktora
+          C:\Users\przek\Desktop\mgr\POBR\Framework17v2\Framework.cpp(192,43):
+          podczas próby dopasowania listy argumentów "(const int)"
+      C:\Users\przek\Desktop\mgr\POBR\Framework17v2\Framework.cpp(122,6):
+      zobacz deklarację „looksLikeM”
+      C:\Users\przek\Desktop\mgr\POBR\Framework17v2\Framework.cpp(192,13):
+      podczas próby dopasowania listy argumentów "(cv::Mat, std::vector<int,std::allocator<int>>, int, int, const int, const int)"
+  
