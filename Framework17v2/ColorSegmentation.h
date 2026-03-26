@@ -5,7 +5,8 @@
 
 using namespace cv;
 
-// Funkcja do segmentacji czerwonego koloru w przestrzeni HSV
 Mat segmentRedColor(const Mat& hsvImage);
+Mat segmentBlueColorLoose(const Mat& hsvImage);
+Mat segmentBlueColor(const Mat& hsvImage, int vMin);
 
 #endif // COLOR_SEGMENTATION_H
