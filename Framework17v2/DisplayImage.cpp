@@ -7,7 +7,7 @@
 using namespace cv;
 using namespace std;
 
-int main(int argc, char** argv)
+int main()
 {
     vector<string> image_paths = { "lidl_logo_1.png", "lidl_logo_2.png", "lidl_logo_3.png" };
     vector<Mat> images;

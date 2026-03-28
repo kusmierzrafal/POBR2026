@@ -388,12 +388,6 @@ BlueDetectionResult BlueFrameDetector::detectBlueMaskForCircle(const Mat& hsvIma
     return result;
 }
 
-void BlueFrameDetector::saveROIImages(const Mat& originalImage, const Mat& redRingsMask, int imageIndex) {
-    (void)originalImage;
-    (void)redRingsMask;
-    (void)imageIndex;
-}
-
 Mat BlueFrameDetector::detectBlueFrames(const Mat& originalImage, const Mat& hsvImage, const Mat& redRingsMask) {
     (void)originalImage;
 

@@ -31,7 +31,6 @@ class BlueFrameDetector {
 public:
     static Mat detectBlueFrames(const Mat& originalImage, const Mat& hsvImage, const Mat& redRingsMask);
     static Mat drawDetectedLogos(const Mat& originalImage, const Mat& hsvImage, const Mat& redRingsMask);
-    static void saveROIImages(const Mat& originalImage, const Mat& redRingsMask, int imageIndex);
     
 private:
     static int ROI_EXPANSION_NUMERATOR;

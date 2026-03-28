@@ -4,7 +4,7 @@ using namespace cv;
 
 Mat segmentRedColor(const Mat& hsvImage)
 {
-    Mat mask(hsvImage.rows, hsvImage.cols, hsvImage.type());
+    Mat mask(hsvImage.rows, hsvImage.cols, CV_8UC1);
     
     for (int i = 0; i < mask.rows; i++) {
         for (int j = 0; j < mask.cols; j++) {
