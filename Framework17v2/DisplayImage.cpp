@@ -1,6 +1,7 @@
 ﻿#include <opencv2/opencv.hpp>
 #include "HSVConverter.h"
 #include "RedRingDetector.h"
+#include "LidlContentVerifier.h"
 #include "BlueFrameDetector.h"
 
 using namespace cv;
@@ -26,7 +27,8 @@ int main(int argc, char** argv)
     {
         Mat hsv = rgbToHsv(images[i]);
         Mat redRings = RedRingDetector::detectRedRings(hsv);
-        Mat detectedLogos = BlueFrameDetector::drawDetectedLogos(images[i], hsv, redRings);
+        Mat verifiedRedRings = LidlContentVerifier::filterValidRings(hsv, redRings);
+        Mat detectedLogos = BlueFrameDetector::drawDetectedLogos(images[i], hsv, verifiedRedRings);
 
         string logo_result_window_name = "Wykryte logo " + to_string(i + 1);
         string logo_result_filename = "detected_logos_lidl_logo_" + to_string(i + 1) + ".png";

@@ -1,5 +1,6 @@
 #include "BlueFrameDetector.h"
 #include "ColorSegmentation.h"
+#include "LidlContentVerifier.h"
 #include <iostream>
 #include <algorithm>
 #include <cmath>
@@ -344,9 +345,12 @@ void BlueFrameDetector::drawLine(Mat& image, BluePoint a, BluePoint b, unsigned 
 }
 
 Mat BlueFrameDetector::createBlueColorMask(const Mat& hsvROI, const Mat& redRingROI, int roiCenterX, int roiCenterY, int roiRadius, int innerRadiusX, int innerRadiusY) {
+
     Mat looseBlueMask = segmentBlueColorLoose(hsvROI);
     int dynamicVMin = computeDynamicBlueVMin(hsvROI, looseBlueMask, roiCenterX, roiCenterY, roiRadius);
     Mat blueMask = segmentBlueColor(hsvROI, dynamicVMin);
+
+    Mat innerMask = LidlContentVerifier::buildInnerMaskFromRedRing(redRingROI, 1);
     int roiRadiusSq = roiRadius * roiRadius;
 
     for (int y = 0; y < blueMask.rows; ++y) {
@@ -354,16 +358,13 @@ Mat BlueFrameDetector::createBlueColorMask(const Mat& hsvROI, const Mat& redRing
         for (int x = 0; x < blueMask.cols; ++x) {
             int dx = x - roiCenterX;
             int dy = y - roiCenterY;
+
             bool outsideOuterRoi = dx * dx + dy * dy > roiRadiusSq;
-            bool insideRedEllipse = false;
+            bool insideInnerMask = get1(innerMask, y, x) == 255;
 
-            if (innerRadiusX > 0 && innerRadiusY > 0) {
-                long long left = (long long)dx * dx * innerRadiusY * innerRadiusY + (long long)dy * dy * innerRadiusX * innerRadiusX;
-                long long right = (long long)innerRadiusX * innerRadiusX * innerRadiusY * innerRadiusY;
-                insideRedEllipse = left <= right;
+            if (outsideOuterRoi || insideInnerMask) {
+                outMask[x] = 0;
             }
-
-            if (outsideOuterRoi || insideRedEllipse) outMask[x] = 0;
         }
     }
 
