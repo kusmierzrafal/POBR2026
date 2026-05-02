@@ -418,6 +418,36 @@ Mat BlueFrameDetector::drawDetectedLogos(const Mat& originalImage, const Mat& hs
     for (size_t i = 0; i < circles.size(); ++i) {
         BlueDetectionResult detection = detectBlueMaskForCircle(hsvImage, redRingsMask, circles[i]);
 
+        vector<BlueMaskComponent> comps;
+        findBlueMaskComponents(detection.blueMask, comps);
+        if (comps.empty()) continue;
+
+        size_t largestCompIndex = 0;
+        for (size_t j = 1; j < comps.size(); ++j) {
+            if (comps[j].pixels.size() > comps[largestCompIndex].pixels.size()) {
+                largestCompIndex = j;
+            }
+        }
+
+        const BlueMaskComponent& largestComp = comps[largestCompIndex];
+        int width = largestComp.maxX - largestComp.minX + 1;
+        int height = largestComp.maxY - largestComp.minY + 1;
+        int area = (int)largestComp.pixels.size();
+        int bboxArea = width * height;
+        if (height <= 0 || bboxArea <= 0) continue;
+
+        double aspect = (double)width / (double)height;
+        if (aspect < 0.4 || aspect > 1.3) continue;
+        if ((double)area < 0.25 * (double)bboxArea) continue;
+
+        int centerMargin = 4;
+        int globalMinX = detection.roi.x + largestComp.minX;
+        int globalMaxX = detection.roi.x + largestComp.maxX;
+        int globalMinY = detection.roi.y + largestComp.minY;
+        int globalMaxY = detection.roi.y + largestComp.maxY;
+        if (circles[i].centerX < globalMinX - centerMargin || circles[i].centerX > globalMaxX + centerMargin ||
+            circles[i].centerY < globalMinY - centerMargin || circles[i].centerY > globalMaxY + centerMargin) continue;
+
         BluePoint topLeft, topRight, bottomRight, bottomLeft;
         if (!estimateQuadrilateralFromMask(detection.blueMask, topLeft, topRight, bottomRight, bottomLeft)) continue;
 
